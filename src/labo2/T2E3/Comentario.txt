@@ -1,0 +1,181 @@
+Resultados
+
+N     Tiempo de fib1 en microsegundos     Tiempo de fib2 en microsegundos
+1     6                                   3
+2     1                                   1
+3     1                                   1
+4     2                                   1
+5     2                                   1
+6     2                                   1
+7     3                                   1
+8     8                                   1
+9     19                                  2
+10    16                                  2
+11    2                                   2
+12    5                                   3
+13    8                                   4
+14    8                                   2
+15    18                                  2
+16    134                                 3
+17    39                                  5
+18    94                                  18
+19    43                                  3
+20    47                                  2
+21    105                                 3
+22    122                                 4
+23    349                                 8
+24    324                                 24
+25    436                                 4
+26    796                                 4
+27    1476                                18
+28    1838                                22
+29    2836                                3
+30    4641                                7
+31    7532                                9
+32    11282                               7
+33    18572                               6
+34    30334                               8
+35    47667                               7
+36    77409                               7
+37    124521                              8
+38    201532                              6
+39    324279                              5
+40    528154                              6
+41    929089                              6
+42    1487257                             6
+43    2346621                             7
+44    4134847                             7
+45    6042588                             6
+46    9914472                             17
+47    16199271                            6
+48    26187717                            8
+49    40033433                            8
+50    70511561                            13
+
+Se puede observar que la funcion fib2 tarde considerablemente menos tiempo que fib1, esto se debe a que fib1
+utiliza llamadas recursivas y muchos de esos calculos son repetidos. fib2 en cambio usa un proceso iterativo
+que demuestra ser extremadamente rapido.
+
+CPU: Intel Core I5 7200u 2.5GHz
+RAM: 1x4GB DDR4 1064MHz
+OS:  Windows 10 Home x64
+Java 1.8.0_151
+
+function fib1(n):                   
+    if n = 0: return 0                      
+    if n = 1: return 1
+    return fib1(n-1) + fib2(n-2)
+
+Del material de lectura sabemos que el tiempo de este algoritmo es aproximadamente T(n) = 1.4^n
+entonces para n = 1000 este algoritmo realizaria aproximadamente 
+134287527673652290000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+operaciones. 
+
+function fib2(n):                   
+    if n = 0 return 0               1 
+    create an array f[0...n]        1
+    f[0] = 0, f[1] = 1              2
+    for i = 2...n:                  n - 1
+        f[i] = f[i-1] + f[i-2]      (n - 1) x 3
+    return f[n]                     1
+
+suma:                               4n+1
+termino dominante:                  4n
+                                    T(n) = 4n
+
+para n = 1000 este algoritmo realizaria aproximadamente 4000 operaciones 
+
+Es aqui donde podemos ver que la cantidad de operaciones de un algoritmo iterativo es inmensamente
+pequeño comparado con la de un algoritmo recursivo.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

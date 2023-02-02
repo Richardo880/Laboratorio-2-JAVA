@@ -1,0 +1,21 @@
+Resultados 
+ 
+         Busqueda binaria               Busqueda lineal
+         T(n)     T/N        T/(NlogN)  T/N2       T(n)     T/N        T/(NlogN)  T/N2
+50000    15       0          0,0000192189 0,0000000060 8801     0          0,0112763648 0,0000035204
+100000   58       0          0,0000349195 0,0000000058 51896    0          0,0312445053 0,0000051896
+150000   74       0          0,0000286912 0,0000000033 143904   0          0,0557942513 0,0000063957
+200000   72       0          0,0000204433 0,0000000018 185446   0          0,0526546809 0,0000046362
+250000   115      0          0,0000256531 0,0000000018 268624   1          0,0599220306 0,0000042980
+300000   152      0          0,0000278471 0,0000000017 364995   1          0,0668687303 0,0000040555
+
+OBS: Solo incluyo estas lineas ya que el programa tarda bastante tiempo en ejecutarse
+
+Se puede observar que por mas que aumente considerablemente N la busqueda binaria se realiza casi instantaneamente
+comparada con la busqueda lineal. Para N = 300000 por ejemplo se observa que las busquedas lineales tardan mas de
+2000 veces mas que las busquedas binarias.
+
+CPU: Intel Core I5 7200u 2.5GHz
+RAM: 1x4GB DDR4 1064MHz
+OS:  Windows 10 Home x64
+Java 1.8.0_151
